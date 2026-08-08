@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form action="add_beer.php" method="POST">
+    <form action="add_beer.php" method="POST" id="form">
         <p>
             <label for="name">Name: <input type="text" id="name" name="name"></label>
         </p>
