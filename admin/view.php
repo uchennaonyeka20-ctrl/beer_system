@@ -18,9 +18,12 @@ if(!$result){
     echo "<td>" . $row['price'] . "</td>";
     echo "<td>" . $row['stock'] . "</td>";
     echo "<td>" . "<a href='edit.php?id=" . $row['id'] . "'>Edit</a>" . "</td>";
+    echo "<td>" . "<a href='delete.php?id=" . $row['id'] . "'>Delete</a>" . "</td>";
     echo "</tr>";
   }
   echo "</table>";
 }
 
 ?>
+
+<a href="add_beer.php">Add Beer</a>
