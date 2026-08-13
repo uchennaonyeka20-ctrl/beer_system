@@ -4,16 +4,38 @@ include("../connection.php");
 
 $id = $_GET['id'];
 
-echo "The id is " . $id;
-
 $sql = "SELECT * FROM beer_inventory WHERE id = $id";
 
-$result = mysqli_query($conn, $sql);
+$selectResult = mysqli_query($conn, $sql);
 
-if(!$result){
+if(!$selectResult){
     die("Failed to retrieve ID: " . mysqli_error($conn));
 }else{
-    $row = mysqli_fetch_assoc($result);
+    $row = mysqli_fetch_assoc($selectResult);
+}
+
+if(isset($_POST['update'])){
+    $name = $_POST['name'];
+    $type = $_POST['type'];
+    $brewer = $_POST['brewer'];
+    $price = $_POST['price'];
+    $stock = $_POST['stock'];
+
+
+    $sql = "UPDATE beer_inventory SET name = '$name', 
+                                      type = '$type', 
+                                      brewer = '$brewer', 
+                                      price = '$price', 
+                                      stock = '$stock' 
+                                      WHERE id = '$id'";
+
+    $updateResult = mysqli_query($conn, $sql);
+
+    if(!$updateResult){
+        die("Update Failed: " . mysqli_error($conn));
+    }else{
+        echo "Update Successful!";
+    }
 }
 ?>
     
@@ -50,6 +72,7 @@ if(!$result){
 
 <input type='submit' id='update' name='update' value='Update Beer'>    <input type='reset' id='reset' name='reset' value='Reset'>
 </form>
+<a href="view.php">View Inventory</a>
     
 </body>
 </html>
