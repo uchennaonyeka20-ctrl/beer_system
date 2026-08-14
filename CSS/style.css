@@ -13,14 +13,13 @@ input{
 
 form{
     border-radius: 10px;
-    background-color: rgb(236, 201, 126);
-    box-shadow: 10px 10px rgba(211, 159, 48, 0.205);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.205);
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(dala.jpg);
     font-weight: bold;
     align-items: center;
-    height: 40vh;
-    width: 350px;
+    height: 50vh;
+    width: 300px;
     padding: 20px;
     
 }

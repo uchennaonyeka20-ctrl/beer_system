@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
     <form action="add_beer.php" method="POST" id="form">
         <p>
-            <label for="name">Name: <input type="text" id="name" name="name"></label>
+            <label for="name">Name: </label><input type="text" id="name" name="name" placeholder="e.g Heineken" required>
         </p>
         <p>
-            <label for="type">Type: <input type="text" id="type" name="type"></label>
+            <label for="type">Type: </label><input type="text" id="type" name="type" placeholder="e.g lager"  required>
         </p>
         <p>
-            <label for="brewer">Brewer: <input type="text" id="brewer" name="brewer"></label>
+            <label for="brewer">Brewer: </label><input type="text" id="brewer" name="brewer" placeholder="e.g Nigerian Breweries Plc"  required>
         </p>
         <p>
-            <label for="price">Price: <input type="text" id="price" name="price"></label>
+            <label for="price">Price: </label><input type="text" id="price" name="price" placeholder="99.99" required>
         </p>
         <p>
-            <label for="stock">Stock: <input type="text" id="stock" name="stock"></label>
+            <label for="stock">Stock: </label><input type="text" id="stock" name="stock" placeholder="100"  required>
         </p>
         <input type="submit" id="submit" name="submit" value="Add Beer"> <input type="reset" id="reset" name="reset" value="Reset">
     </form>
