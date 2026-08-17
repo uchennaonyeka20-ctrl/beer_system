@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+    <header id="header">
+        <h1>DALA TRADING EXPRESS</h1><br>
+    </header><br>
+    <main>
+        <h2>Enter Item Details</h2>
     <form action="add_beer.php" method="POST" id="form">
         <p>
             <label for="name">Name: </label><input type="text" id="name" name="name" placeholder="e.g Heineken" required>
@@ -26,7 +31,13 @@
         </p>
         <input type="submit" id="submit" name="submit" value="Add Beer"> <input type="reset" id="reset" name="reset" value="Reset">
     </form>
-    
+    </main>
+    <footer id="footer">
+        <p>Author: Uchenna Nelson Onyeka</p>
+        <p>Email: <small><a href="mailto: uche123@gmail.com">uche123@gmail.com</a></small></p>
+        <p>Contact: 012-345-6789</p>
+        <p>&copy; copyright reserved</p>
+    </footer>
 </body>
 </html>
 <?php
